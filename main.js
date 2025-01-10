@@ -75,7 +75,7 @@ renderer.xr.addEventListener("sessionstart", sessionStart);
 
 document.getElementById("controls").appendChild(
     ARButton.createButton(renderer, {
-        requiredFeatures: ["local", "hit-test", "dom-overlay", "hand-tracking"],
+        requiredFeatures: ["local", "dom-overlay", "hand-tracking"],
         domOverlay: { root: document.querySelector("#overlay") },
     })
 );
