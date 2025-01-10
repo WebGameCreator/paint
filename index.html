@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>3D Painting</title>
+	<meta charset="UTF-8" />
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<script type="importmap">
+		{
+		  "imports": {
+			"three": "https://cdn.jsdelivr.net/npm/three@0.171.0/build/three.module.js",
+			"three/examples/jsm/": "https://cdn.jsdelivr.net/npm/three@0.171.0/examples/jsm/"
+		  }
+		}
+	</script>
+</head>
+<body style="background-color: transparent; background-image: none;">
+	<div id="overlay">
+		<div id="controls">
+			<select id="shapeSelector">
+				<option value="sphere">Sphere</option>
+				<option value="cylinder">Cylinder</option>
+				<option value="cube">Cube</option>
+				<option value="pyramid">Pyramid</option>
+			</select>
+			<input type="color" id="colorPicker" value="#ff0000">
+			<input type="range" id="sizeSlider" min="0.1" max="3" step="0.1" value="1">
+			<button id="placeShape">Place Shape</button>
+			<button id="clearShapes">Clear All</button>
+		</div>
+	</div>
+	<div id="app">
+		<div id="ar-not-supported">
+			<img id="qr-code" />
+		</div>
+	</div>
+	<script type="module" src="/main.js"></script>
+</body>
+
+</html>
